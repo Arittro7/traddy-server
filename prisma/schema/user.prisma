@@ -54,14 +54,14 @@ model Guide {
   contactNumber       String
   gender              Gender
   address             String?
-  district            String? 
+  district            String? // guide location
   registrationNumber  String   @unique
   experience          Int      @default(0)
-  languages           String[] 
-  skills              String[] 
+  languages           String[] // e.g. ["English", "Bangla"]
+  skills              String[] // e.g. ["History", "Photography"]
   appointmentFee      Int
   qualification       String
-  about               String? 
+  about               String? // short bio
   currentWorkingPlace String?
   designation         String?
   averageRating       Float    @default(0.0)
