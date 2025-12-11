@@ -58,21 +58,7 @@ const loginUser = catchAsync(async (req: Request, res: Response) => {
     secure: envVars.NODE_ENV === "production",
     sameSite: "none",
   });
-
-  // res.cookie("accessToken", data.accessToken, {
-  //   secure: envVars.NODE_ENV !== "development",
-  //   httpOnly: true,
-  //   sameSite: "lax", // Change to 'lax' for local development
-  //   maxAge: 7 * 24 * 60 * 60 * 1000,
-  // });
-
-  // res.cookie("refreshToken", data.refreshToken, {
-  //   secure: envVars.NODE_ENV !== "development",
-  //   httpOnly: true,
-  //   sameSite: "lax", // Change to 'lax' for local development
-  //   maxAge: 7 * 24 * 60 * 60 * 1000,
-  // });
-
+  
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,

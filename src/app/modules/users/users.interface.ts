@@ -10,6 +10,11 @@ export enum UserStatus {
   SUSPENDED = "suspended",
 }
 
+export interface IAuthProvider{
+  provider : "google" | "credentials"
+  providerId : string;
+}
+
 export interface IUser {
   // Common Fields
   name: string;
