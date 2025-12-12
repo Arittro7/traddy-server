@@ -131,7 +131,6 @@ const getUserProfileDetails = async (id: string) => {
 
   if (user.role === Role.GUIDE) {
     // Guide-specific data
-    // 1. Get guide's active listings
     const listings = (await Listing.find({
       guide: user._id,
       isActive: true,
@@ -221,7 +220,6 @@ const getUserProfileDetails = async (id: string) => {
     };
   } else if (user.role === Role.TOURIST) {
     // Tourist-specific data
-    // 1. Get reviews written by the tourist
     const touristReviews = (await Review.find({
       user: user._id,
     })
