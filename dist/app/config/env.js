@@ -22,8 +22,6 @@ const loadEnvVariables = () => {
         "CLOUDINARY_API_SECRET",
         "STRIPE_SECRET_KEY",
         "STRIPE_WEBHOOK_SECRET",
-        "SUPER_ADMIN_EMAIL",
-        "SUPER_ADMIN_PASSWORD"
     ];
     requiredEnvVariables.forEach((key) => {
         if (!process.env[key]) {
@@ -45,8 +43,6 @@ const loadEnvVariables = () => {
         CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET,
         STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
         STRIPE_WEBHOOK_SECRET: process.env.STRIPE_WEBHOOK_SECRET,
-        SUPER_ADMIN_EMAIL: process.env.SUPER_ADMIN_EMAIL,
-        SUPER_ADMIN_PASSWORD: process.env.SUPER_ADMIN_PASSWORD
     };
 };
 exports.envVars = loadEnvVariables();
