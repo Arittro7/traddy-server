@@ -23,7 +23,6 @@ app.post(
 const corsOptions = {
   origin: [
     envVars.FRONTEND_URL,
-    // "https://frontend-url.vercel.app",
     "http://localhost:3000",
     /\.vercel\.app$/,
   ],
