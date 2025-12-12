@@ -23,11 +23,11 @@ const createBooking = async (userId: string, payload: IBooking) => {
     if (!listing || !user) {
       throw new Error("Listing or user not found");
     }
-    // Check if listing is active
+    // Check if listing is active-----⛳
     if (!listing.isActive) {
       throw new Error("This tour is currently not available for booking");
     }
-    // Check if guide is available on requested date
+    // Check if guide is available on requested date-----⛳
     const existingBooking = await Booking.findOne({
       listing: payload.listing,
       date: payload.date,
@@ -38,10 +38,10 @@ const createBooking = async (userId: string, payload: IBooking) => {
       throw new Error("Guide is not available on this date");
     }
 
-    // 2. Calculate total price
+    // 2. Calculate total price-----⛳
     const totalPrice = listing.fee * payload.groupSize;
 
-    // 3. Create booking - Status: PENDING
+    // 3. Create booking - Status: PENDING-----⛳
     const booking = await Booking.create(
       [
         {
