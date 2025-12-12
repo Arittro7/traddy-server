@@ -100,12 +100,6 @@ const toggleUserStatus = async (userId: string, isActive: boolean) => {
     throw new Error("Cannot deactivate admin user");
   }
 
-  // Prevent self-deactivation
-  // This check should be done in controller with currentUser
-  // if (currentUser._id.toString() === userId && !isActive) {
-  //   throw new Error("Cannot deactivate your own account");
-  // }
-
   // Update status
   user.isActive = isActive;
 
@@ -119,8 +113,6 @@ const toggleUserStatus = async (userId: string, isActive: boolean) => {
   return result;
 };
 
-// users.service.ts - Fixed version
-// users.service.ts - Updated for role-specific responses
 const getUserProfileDetails = async (id: string) => {
   // Get basic user info
   const user = await User.findById(id).select("-password");
