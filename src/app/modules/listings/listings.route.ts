@@ -35,8 +35,6 @@ router.post(
     );
     return createListing(req, res, next);
   }
-  // validateRequest(listingZodSchema.createListingZodSchema),
-  // createListing
 );
 
 router.patch(

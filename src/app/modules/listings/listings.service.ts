@@ -5,15 +5,6 @@ import { UploadApiResponse } from "cloudinary";
 
 import { fileUploader } from "../../../utils/fileUploader";
 
-// const createListing = async (req: Request) => {
-//   const payload = { ...req.body, guide: req.user._id };
-//   if (req.file) {
-//     const uploadResult = await fileUploader.uploadToCloudinary(req.file);
-//     req.body.image = uploadResult?.secure_url;
-//   }
-//   return await Listing.create(payload);
-// };
-
 const createListing = async (req: Request) => {
   const payload = { ...req.body, guide: req.user._id };
 
