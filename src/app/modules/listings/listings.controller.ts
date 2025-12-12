@@ -6,16 +6,7 @@ import { Role } from "../users/users.interface";
 import { Request, Response } from "express";
 
 const createListing = catchAsync(async (req: Request, res: Response) => {
-  // Only guides can create listings
-  // if (req.user.role !== Role.GUIDE) {
-  //   return sendResponse(res, {
-  //     success: false,
-  //     statusCode: httpStatus.FORBIDDEN,
-  //     message: "Only guides can create tour listings",
-  //     data: null,
-  //   });
-  // }
-
+  
   const payload = { ...req.body, guide: req.user._id };
 
   const result = await listingService.createListing(req);
