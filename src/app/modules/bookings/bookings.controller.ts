@@ -30,7 +30,6 @@ export const getMyBookings = catchAsync(async (req: Request, res: Response) => {
 });
 export const getAllBookings = catchAsync(
   async (req: Request, res: Response) => {
-    // const userId = req.user._id;
     const result = await bookingService.getAllBookings();
 
     sendResponse(res, {
@@ -42,22 +41,6 @@ export const getAllBookings = catchAsync(
   }
 );
 
-// export const updateBookingStatus = catchAsync(
-//   async (req: Request, res: Response) => {
-//     const { id } = req.params;
-//     const result = await bookingService.updateBookingStatus(
-//       id,
-//       req.body.status
-//     );
-
-//     sendResponse(res, {
-//       success: true,
-//       statusCode: 200,
-//       message: "Booking status updated",
-//       data: result,
-//     });
-//   }
-// );
 
 // booking.controller.ts
 export const updateBookingStatus = catchAsync(
