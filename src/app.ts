@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import routes from "./routes"; // Your main router (import all modules there)
+import routes from "./routes"; 
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import { notFoundRoute } from "./middleware/notFoundRoute";
