@@ -28,7 +28,6 @@ const reviewSchema = new Schema<IReview>(
   }
 );
 
-// Prevent duplicate reviews
 reviewSchema.index({ listing: 1, user: 1 }, { unique: true });
 
 export const Review = model<IReview>("Review", reviewSchema);
