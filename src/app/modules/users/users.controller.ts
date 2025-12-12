@@ -24,7 +24,7 @@ const getAllUser = catchAsync(async (req: Request, res: Response) => {
   });
 });
 const getMe = catchAsync(async (req: Request, res: Response) => {
-  const user = req.user; // already a User object
+  const user = req.user;
   sendResponse(res, {
     success: true,
     statusCode: httpStatus.OK,
