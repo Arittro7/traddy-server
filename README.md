@@ -27,9 +27,9 @@ Use the following accounts for testing the platform:
 
 ## 🚀 Project Overview
 
-Traddy is a ***Local Guide Platform*** empowers locals to share their city’s hidden gems, culture, and stories through tours and experiences. Travelers can search, filter, and book guides that match their interests — whether for food walks, adventure trips, cultural tours, or photography sessions.
+Traddy is a community-driven guide platform that enables locals to showcase their city’s hidden treasures, cultural richness, and personal stories through curated tours and experiences. Travelers can easily search, filter, and book guides tailored to their interests — from food walks and adventure outings to cultural immersions and photography journeys.
 
-The platform democratizes travel guiding, making tourism more authentic and community-driven.
+By opening up guiding opportunities to everyone, Traddy makes tourism more genuine, inclusive, and rooted in local communities.
 
 ---
 
