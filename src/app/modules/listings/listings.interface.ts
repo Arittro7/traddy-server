@@ -9,7 +9,7 @@ export enum ListingCategory {
 
 export interface IListing {
   // Guide reference
-  guide: string; // userId of the guide
+  guide: string; 
 
   // Basic info
   title: string;
@@ -20,11 +20,9 @@ export interface IListing {
   maxGroupSize: number;
   meetingPoint: string;
 
-  // Media
-  images?: string[]; // URLs
-
-  // Booking & availability
-  availableDates?: Date[]; // optional, for calendar
+  
+  images?: string[]; 
+  availableDates?: Date[]; 
 
   // Stats
   totalBookings?: number;
