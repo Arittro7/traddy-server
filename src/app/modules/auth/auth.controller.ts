@@ -77,7 +77,7 @@ const logoutUser = catchAsync(async (req: Request, res: Response) => {
   res.clearCookie("refreshToken", {
     httpOnly: true,
     secure: envVars.NODE_ENV === "production",
-    sameSite: "none", // Change to 'lax' for local development
+    sameSite: "none", 
     maxAge: 7 * 24 * 60 * 60 * 1000,
   });
   sendResponse(res, {

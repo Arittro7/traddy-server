@@ -16,7 +16,7 @@ const registerUser = async (req: Request) => {
     }
   }
 
-  // Check if user exists
+  // Check if user exists-----⛳
   const existingUser = await User.findOne({ email: payload.email });
   if (existingUser) {
     throw new AppError(409, "User already exists");
@@ -35,7 +35,7 @@ const registerUser = async (req: Request) => {
     }
   }
 
-  // Remove guide fields for tourists
+  // Remove guide fields for tourists-----⛳
   if (payload.role === Role.TOURIST) {
     delete payload.expertise;
     delete payload.dailyRate;
@@ -45,7 +45,7 @@ const registerUser = async (req: Request) => {
   payload.password = await bcrypt.hash(payload.password, 10);
   const user = await User.create(payload);
 
-  // Generate tokens for immediate login
+  // Generate tokens for immediate login-----⛳
   const jwtPayload = {
     _id: user._id.toString(),
     email: user.email,
