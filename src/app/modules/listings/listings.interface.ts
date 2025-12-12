@@ -26,7 +26,7 @@ export interface IListing {
 
   // Stats
   totalBookings?: number;
-  rating?: number; // average rating
+  rating?: number;
 
   createdAt?: Date;
   updatedAt?: Date;
