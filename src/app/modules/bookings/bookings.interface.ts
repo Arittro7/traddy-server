@@ -8,15 +8,14 @@ export enum BookingStatus {
   COMPLETED = "COMPLETED",
   CANCELLED = "CANCELLED",
 }
-// export type BookingStatus = "PENDING" | "confirmed" | "cancelled";
 
 export interface IBooking {
   _id?: string;
-  listing: Types.ObjectId | IListing; // Can be ObjectId or populated Listing // Listing ID
-  user: Types.ObjectId; // User ID
+  listing: Types.ObjectId | IListing; 
+  user: Types.ObjectId; 
   date: Date;
   groupSize: number;
   totalPrice: number;
   status: BookingStatus;
-  payment?: Types.ObjectId; // Add this line
+  payment?: Types.ObjectId; 
 }
