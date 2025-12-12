@@ -30,8 +30,8 @@ userRoute.patch(
   validateRequest(userZodSchema.updateUserZodSchema),
   updateUser
 );
-userRoute.delete("/:id", auth([Role.ADMIN]), deleteUser); // NEW
-userRoute.patch("/:id/role", auth([Role.ADMIN]), changeUserRole); // NEW
-userRoute.patch("/:id/status", auth([Role.ADMIN]), toggleUserStatus); // NEW
+userRoute.delete("/:id", auth([Role.ADMIN]), deleteUser); 
+userRoute.patch("/:id/role", auth([Role.ADMIN]), changeUserRole); 
+userRoute.patch("/:id/status", auth([Role.ADMIN]), toggleUserStatus); 
 
 export default userRoute;
