@@ -5,6 +5,7 @@ import { listingRoute } from "../app/modules/listings/listings.route";
 import { bookingRoute } from "../app/modules/bookings/bookings.route";
 import { reviewRoute } from "../app/modules/reviews/reviews.route";
 import { wishlistRoutes } from "../app/modules/wishlist/wishlist.route";
+import metaRoute from "../app/modules/meta/meta.route";
 
 const routes = Router();
 
@@ -14,5 +15,6 @@ routes.use("/listing", listingRoute);
 routes.use("/booking", bookingRoute);
 routes.use("/review", reviewRoute);
 routes.use("/wishlist", wishlistRoutes);
+routes.use("/meta", metaRoute);
 
 export default routes;
